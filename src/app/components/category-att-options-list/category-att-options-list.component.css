@@ -1,0 +1,12 @@
+.attribute-container{
+    height: 50vh;
+    border: 1px solid gainsboro;
+    background-color: ghostwhite;
+}
+.attribute{
+    cursor: pointer;
+
+}
+.attribute:hover{
+    background-color: rgb(189, 187, 187);
+}

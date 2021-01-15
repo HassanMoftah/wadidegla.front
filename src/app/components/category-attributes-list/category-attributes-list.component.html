@@ -1,0 +1,21 @@
+<div class="container" style="width: 100%;">
+    <div class="row ml-0">
+     <p style="font-weight: bold; font-size: 17px;">Attributes</p> 
+      <div class="ml-auto mr-0">
+        <button mat-flat-button color="primary" (click)="add()">Add Attribute</button>
+      </div>
+     </div>
+     <div class="row attribute-container">
+       <div class="container">
+           <div [class.attribute-selected]="t.Selected" (click)="select(t)" class="row attribute"*ngFor="let t of CategoryAttributes">
+                <div class="col-md-4">{{t.Name}}</div>
+                <div class="col-md-4">{{t.Type}}</div>
+               <div class="ml-auto mr-0">
+                   <mat-icon (click)="delete(t)">
+                       delete
+                   </mat-icon>
+               </div>
+           </div>
+       </div>
+     </div>
+</div>

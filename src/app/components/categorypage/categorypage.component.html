@@ -1,0 +1,15 @@
+<div class="container" *ngIf="Loaded">
+    <div class="row">
+        <h4 >
+        Category : </h4>
+        <h4  style="font-weight: bold;margin-left: 10px;">{{category.Name}}</h4>
+    </div>
+    <div class="row" style="margin-top: 20px;">
+        <div class="col-md-5 ">
+            <app-category-attributes-list class="row" [Category]='category'></app-category-attributes-list>
+        </div>
+        <div class="col-md-5 ">
+            <app-category-att-options-list class="row" style="margin-left:10px ;"></app-category-att-options-list>
+        </div>
+    </div>
+</div>

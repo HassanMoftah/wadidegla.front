@@ -1,0 +1,18 @@
+<ul    >
+    <li  class ="row ml-0">
+        
+            <mat-icon *ngIf="!category.Open" (click)="toggle()">keyboard_arrow_right</mat-icon>
+            <mat-icon *ngIf="category.Open" (click)="toggle()">keyboard_arrow_down</mat-icon>
+            <p (click)="gotocatgorypage()" >{{category.Name}}</p>
+       
+           
+        <div class="ml-auto mr-3">
+            <mat-icon (click)="add()" >add</mat-icon>
+            <mat-icon (click)="deleteclicked()">delete</mat-icon>
+        </div>
+       
+    </li>
+    <ul *ngIf="category.Open"  >
+        <app-categorytreeleaf *ngFor="let c of childs" (Deleted)="delete($event)" [category]="c"></app-categorytreeleaf>
+    </ul>
+</ul>

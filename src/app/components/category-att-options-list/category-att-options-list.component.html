@@ -1,0 +1,21 @@
+<div class="container" style="width: 100%;">
+    <div class="row ml-0">
+     <p style="font-weight: bold; font-size: 17px;">Options</p> 
+      <div class="ml-auto mr-0">
+        <button [disabled]="addbuttonDisable()" mat-flat-button color="primary" (click)="add()">Add Option</button>
+      </div>
+     </div>
+     <div class="row attribute-container">
+       <div class="container">
+        <div class="row attribute"*ngFor="let o of options">
+            <div class="col-md-4">{{o.Value}}</div>
+            
+           <div class="ml-auto mr-0">
+               <mat-icon (click)="delete(o)">
+                   delete
+               </mat-icon>
+           </div>
+       </div>
+       </div>
+     </div>
+</div>
